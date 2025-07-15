@@ -68,7 +68,25 @@ function displayweather(data)
 
 function getemoji(weatherid)
 {
-
+    switch(true)
+    {
+        case(weatherid >= 200 && weatherid <300):
+        return "⛈️";
+        case(weatherid >= 300 && weatherid <400):
+        return "🌧️";
+        case(weatherid >= 500 && weatherid <600):
+        return "🌧️🌧️";
+        case(weatherid >= 600 && weatherid <700):
+        return "🌨️";
+        case(weatherid >= 700 && weatherid <800):
+        return "🌁";
+        case(weatherid == 800):
+        return "☀️";
+        case(weatherid >= 801 && weatherid <810):
+        return "⛅";
+        default:
+            return "👽";
+    }
 }
 
 function displayerror(message)
